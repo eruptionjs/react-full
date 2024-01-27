@@ -5,7 +5,6 @@ import { defineConfig } from 'vite'
 import { compression } from 'vite-plugin-compression2'
 import { qrcode } from 'vite-plugin-qrcode'
 
-// https://vitejs.dev/config/
 export default defineConfig({
   resolve: {
     alias: {
@@ -32,7 +31,7 @@ export default defineConfig({
     setupFiles: './src/setup-test.ts',
   },
   build: {
-    sourcemap: true,
+    sourcemap: false,
     target: 'esnext',
     minify: true,
     cssTarget: 'esnext',
@@ -43,6 +42,7 @@ export default defineConfig({
       output: {
         manualChunks: {
           'vendor-react': ['react', 'react/jsx-runtime', 'react-dom'],
+          'vendor-mantine': ['@mantine/core', '@mantine/hooks', '@mantine/notifications'],
         },
       },
     },

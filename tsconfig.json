@@ -31,7 +31,7 @@
     },
     "types": ["vite/client", "vitest/globals"]
   },
-  "include": ["**/*.ts", "**/*.tsx"],
+  "include": ["**/*.ts", "**/*.tsx", "src/assets/ReactLogo/ReactLogo.sgv"],
   "exclude": ["node_modules"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

@@ -1,8 +1,8 @@
 {
   "name": "eruption",
-  "description": "Next Generation Boilerplate for React/Typescript, built on top of Vite ⚡️",
+  "description": "Opinionated version of EruptionJS🌋 for ReactJS Projects.",
   "private": false,
-  "version": "1.9",
+  "version": "0.1",
   "type": "module",
   "main": "src/main.tsx",
   "license": "MIT",
@@ -32,7 +32,8 @@
     "prettier:fix": "bun run prettier -- --write",
     "format": "bun run prettier && bun run lint",
     "format:fix": "bun run prettier:fix && bun run lint:fix",
-    "lint-staged": "lint-staged && tsc",
+    "typecheck": "tsc",
+    "lint-staged": "tsc && lint-staged",
     "prepare": "husky",
     "commit": "commit"
   },
@@ -44,8 +45,17 @@
     "bun": "^1.0.x"
   },
   "dependencies": {
+    "@mantine/core": "^7.x",
+    "@mantine/hooks": "^7.x",
+    "@mantine/notifications": "^7.x",
+    "@tabler/icons-react": "^2.x",
+    "@tanstack/react-query": "^5.x",
+    "@tanstack/react-query-devtools": "^5.x",
+    "axios": "^1.x",
     "react": "^18.x",
-    "react-dom": "^18.x"
+    "react-dom": "^18.x",
+    "react-router-dom": "^6.x",
+    "zustand": "^4.x"
   },
   "devDependencies": {
     "@commitlint/cli": "^18.x",
@@ -78,6 +88,9 @@
     "lint-staged": "^15.x",
     "msw": "^2.x",
     "npm-check-updates": "^16.x",
+    "postcss": "^8.4.33",
+    "postcss-preset-mantine": "^1.12.3",
+    "postcss-simple-vars": "^7.0.1",
     "prettier": "^3.x",
     "stylelint": "^16.x",
     "stylelint-config-standard": "^36.x",
