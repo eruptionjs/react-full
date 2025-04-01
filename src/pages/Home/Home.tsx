@@ -1,5 +1,5 @@
-import { FC, useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { type FC, type JSX, useState } from 'react'
+import { useNavigate } from 'react-router'
 
 import { Anchor, Box, Button, Container, Flex, Image, Text, Title } from '@mantine/core'
 

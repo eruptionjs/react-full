@@ -1,4 +1,4 @@
-import axios, { type AxiosError, type AxiosInstance, AxiosRequestConfig } from 'axios'
+import axios, { type AxiosError, type AxiosInstance, type AxiosRequestConfig } from 'axios'
 
 type RequestUrl = string
 type RequestBody = unknown

@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import { type FC, type JSX } from 'react'
 
 const ReactLogo: FC = (): JSX.Element => {
   return (
