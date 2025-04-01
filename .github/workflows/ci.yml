@@ -1,10 +1,17 @@
-name: CI
+# This workflow runs on every push to the staging and main branches
+# and on pull requests targeting those branches.
+# It installs dependencies, runs linting, tests, and builds the project using Bun.
+name: 'CI: Pre-Merge Validations'
 
 on:
   push:
     branches:
+      - staging
       - main
   pull_request:
+    branches:
+      - staging
+      - main
 
 # cancel in-progress runs on new commits to same PR (gitub.event.number)
 concurrency:
@@ -12,8 +19,8 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  build:
-    name: Build, lint, and test on Bun ${{ matrix.node }} and ${{ matrix.os }}
+  run:
+    name: Install, lint, test, and build on Bun  ${{ matrix.os }}
 
     runs-on: ${{ matrix.os }}
     strategy:
