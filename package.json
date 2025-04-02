@@ -46,7 +46,7 @@
     "bun": "^1.2.x"
   },
   "dependencies": {
-    "@eruptionjs/config": "^0.5.x",
+    "@eruptionjs/config": "^0.6.x",
     "@mantine/core": "^7.x",
     "@mantine/hooks": "^7.x",
     "@mantine/notifications": "^7.x",
