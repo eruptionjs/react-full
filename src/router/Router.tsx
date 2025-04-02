@@ -1,18 +1,14 @@
-import { FC } from 'react'
-import {
-  Route,
-  RouterProvider,
-  createBrowserRouter,
-  createRoutesFromElements,
-} from 'react-router-dom'
+import { type FC } from 'react'
 
 import { Spinner } from '@/components'
+import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from '@/libs'
 
 const RouterStack = createBrowserRouter(
   createRoutesFromElements(
     <>
       <Route
         path="/"
+        hydrateFallbackElement={<Spinner />}
         lazy={async () => {
           const { Home } = await import('@/pages/Home')
           return {
@@ -23,6 +19,7 @@ const RouterStack = createBrowserRouter(
 
       <Route
         path="*"
+        hydrateFallbackElement={<Spinner />}
         lazy={async () => {
           const { NotFound } = await import('@/pages/NotFound')
           return {
@@ -34,8 +31,8 @@ const RouterStack = createBrowserRouter(
   ),
 )
 
-const Routes: FC = () => {
-  return <RouterProvider router={RouterStack} fallbackElement={<Spinner />} />
+const Router: FC = () => {
+  return <RouterProvider router={RouterStack} />
 }
 
-export { Routes }
+export { Router }

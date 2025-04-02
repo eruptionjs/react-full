@@ -2,25 +2,30 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 
 import { App } from '@/App'
+import { Router } from '@/router'
 
 const root = createRoot(document.getElementById('root') as HTMLElement)
 
 if (import.meta.env.MODE === 'test') {
-  import('@/__mocks__/browser')
+  void import('@/__mocks__/browser')
     .then(({ worker }) => {
-      worker.start()
+      void worker.start()
     })
     .then(() => {
       root.render(
         <StrictMode>
-          <App />
+          <App>
+            <Router />
+          </App>
         </StrictMode>,
       )
     })
 } else {
   root.render(
     <StrictMode>
-      <App />
+      <App>
+        <Router />
+      </App>
     </StrictMode>,
   )
 }

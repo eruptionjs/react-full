@@ -1,9 +1,9 @@
-import { FC } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { type FC } from 'react'
+import { useNavigate } from 'react-router'
 
 import { Button, Center, Flex } from '@mantine/core'
 
-const NotFound: FC = (): JSX.Element => {
+const NotFound: FC = () => {
   const navigate = useNavigate()
 
   return (
