@@ -47,7 +47,7 @@
   },
   "dependencies": {
     "@eruptionjs/config": "^0.6.x",
-    "@mantine/core": "^7.x",
+    "@mantine/core": "^8.x",
     "@mantine/hooks": "^7.x",
     "@mantine/notifications": "^7.x",
     "@tabler/icons-react": "^3.x",
