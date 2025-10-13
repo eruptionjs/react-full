@@ -79,7 +79,7 @@
     "husky": "^9.x",
     "lint-staged": "^15.x",
     "msw": "^2.x",
-    "npm-check-updates": "^17.x",
+    "npm-check-updates": "^19.x",
     "postcss": "^8.5.3",
     "postcss-preset-mantine": "^1.17.x",
     "postcss-simple-vars": "^7.0.x",
